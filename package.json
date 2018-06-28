@@ -1,0 +1,25 @@
+{
+  "name": "weather",
+  "version": "1.0.0",
+  "description": "weather and notification",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "weather",
+    "chrome-extension"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lyd9607/weather.git"
+  },
+  "author": "luoyide9607@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "gulp": "^3.9.1",
+    "jquery": "^3.3.1",
+    "later": "^1.2.0"
+  }
+}

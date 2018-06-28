@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>weather</title>
+  <link rel="stylesheet" href="./css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/popup.css">
+  <link rel="stylesheet" href="./css/iconfont.css">
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="input-group">
+      <input 
+        type="text" 
+        class="form-control" 
+        placeholder="请输入城市名称" 
+        aria-describedby="basic-addon2"
+      >
+    </div>
+    <ul class="tipText"></ul>
+    <div class="content">
+      <div class="msg" id="w0"></div>
+      <div class="cloumns">
+        <div class="col-xs-4 next" id="w1"></div>
+        <div class="col-xs-4 next" id="w2"></div>
+        <div class="col-xs-4 next" id="w3"></div>
+        <div class="col-xs-4 next" id="w4"></div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/later.min.js"></script>
+  <script src="./js/popup.js"></script>
+</body>
+</html>

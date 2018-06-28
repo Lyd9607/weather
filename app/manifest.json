@@ -1,0 +1,31 @@
+{
+  "name": "weather notification",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "default_locale": "zh_CN",
+  "icons": {
+    "16": "images/weather.png",
+    "48": "images/weather.png",
+    "128": "images/weather.png"
+  },
+  "description": "show weather&notification",
+  "browser_action": {
+    "default_title": "weather notification",
+    "default_icon": "images/weather.png",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": [
+      "./js/jquery.min.js",
+      "./js/later.min.js",
+      "./js/background.js"
+    ]
+  },
+  "permissions": [
+    "notifications",
+    "storage",
+    "contextMenus",
+    "http://*/*",
+    "https://*/*"
+  ]
+}

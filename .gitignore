@@ -1,0 +1,8 @@
+/node_modules
+/build/*
+!/dist/
+/*.zip
+/*.crx
+/*.pem
+/.DS_Store
+/npm-debug.log

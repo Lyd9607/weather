@@ -28,10 +28,12 @@ function idToName(json) {
   let endObj = {}
   for (let x in json) {
     json[x].forEach(item => {
+      let pro = item['省']
       let areas = item['市']
       areas.forEach(area => {
         if (!endObj[area['编码']]) {
-          endObj[area['编码']] = area['市名']
+          endObj[area['编码']] = pro === area['市名'] ?
+            area['市名'] : pro + '-' + area['市名']
         }
       })
     })
@@ -98,9 +100,9 @@ function setNotify() {
       }
       if (msg.type.indexOf('雨') !== -1
         || msg.type.indexOf('雪') !== -1
-        || msg.type.indexOf('霾') !==-1
-        || msg.type.indexOf('沙') !==-1
-        || msg.type.indexOf('冰') !==-1) {
+        || msg.type.indexOf('霾') !== -1
+        || msg.type.indexOf('沙') !== -1
+        || msg.type.indexOf('冰') !== -1) {
         tip += `将有${msg.type}~\n`
       }
       let level = parseInt(fengli.split('').reverse()[1], 10)

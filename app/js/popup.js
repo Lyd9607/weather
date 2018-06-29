@@ -15,6 +15,8 @@ function render() {
     let code = Object.keys(currentCity)[0]
     let msg = bg.fetch(url, code)
 
+    $('.form-control').val(currentCity[code])
+
     if (msg) {
       let forecast = msg.forecast
       let temp = msg.wendu
@@ -82,7 +84,11 @@ $(() => {
     let list = {}
     if (val) {
       for (let x in cityCode) {
-        if (cityCode[x].indexOf(val) !== -1) {
+        let test = cityCode[x]
+        if (cityCode[x].split('-')[1]) {
+          test = cityCode[x].split('-')[1]
+        }
+        if (test.indexOf(val) !== -1) {
           list[x] = cityCode[x]
         }
       }

@@ -52,7 +52,7 @@ function fetch(url, code) {
      // console.log(msg)
     },
     error: function(jqXHR, textStatus, errorMsg){
-      chrome.notifications.create(bg.getNotificationId(), {
+      chrome.notifications.create(getNotificationId(), {
         type: "basic",
         iconUrl: '../images/weather.png',
         title: 'error',
